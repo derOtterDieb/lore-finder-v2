@@ -1,0 +1,38 @@
+.Custom-form {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.Custom-label {
+    margin-left: 2%;
+    background: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 75%;
+    min-width: 150px;
+    caret-color: white;
+    color: whitesmoke;
+}
+
+.Results-container {
+    margin-top: 2em;
+}
+
+.Custom-input {
+    margin-left: 5px;
+    background-color: #b30059;
+    border: 1px solid #99004d;
+    color: whitesmoke;
+    width: 60px;
+    height: 30px;
+    font-size: 1.1rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.Custom-input:hover {
+    background-color: #800040;
+    border: 1px solid #660033;
+}
