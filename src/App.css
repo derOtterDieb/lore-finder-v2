@@ -3,15 +3,14 @@
 }
 
 .App-header {
-  max-height: 10vh;
+  text-align: center;
+  height: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 14;
-  color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+.Logo-container {
+  display: inline-flex;
 }

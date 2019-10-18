@@ -1,12 +1,16 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './Search.css';
 import { DebounceInput } from 'react-debounce-input';
+import FfxivApiResults from './components/ffxivApiResults';
 
-class Search extends React.Component<{}, { value: string }> {
+class Search extends Component {
   constructor(props: any) {
     super(props);
-    this.state = {value: ''};
     this.handleChange = this.handleChange.bind(this);
+  }
+
+  state = {
+    ffxivApiResults: []
   }
 
   handleChange(event: any) {
@@ -16,7 +20,12 @@ class Search extends React.Component<{}, { value: string }> {
     url += '&language=fr';
     url += '&private_key=';
     url += '626567fb7cc14633bcd12bb537187597424f9176280348a0a946fe9730fe4adf';
-    this.setState({value: url});
+    fetch(url)
+      .then(res => res.json())
+      .then((data) =>{
+        this.setState({ ffxivApiResults: data })
+      })
+      .catch(console.log)
   }
 
   render() {
@@ -30,7 +39,7 @@ class Search extends React.Component<{}, { value: string }> {
         </label>
         <br/>
         <div className="Results-container">
-          <Result searchValue={this.state.value}/>
+          <FfxivApiResults ffxivApiResults={this.state.ffxivApiResults} />
         </div>
       </form>
     );
