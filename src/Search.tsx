@@ -12,11 +12,12 @@ class Search extends Component {
   state = {
     ffxivApiResults: []
   }
-
+  
   handleChange(event: any) {
     let url = '';
-    url += 'https://xivapi.com/search?string=';
+    url += 'https://xivapi.com/lore?string=';
     url += event.target.value.replace(/ /g, '+');
+    url += '&columns=ID,Text,Data,Text_fr,Source,SourceID'
     url += '&language=fr';
     url += '&private_key=';
     url += '626567fb7cc14633bcd12bb537187597424f9176280348a0a946fe9730fe4adf';

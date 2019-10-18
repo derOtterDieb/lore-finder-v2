@@ -19,3 +19,17 @@
 .Logo-container {
   display: inline-flex;
 }
+
+.Item {
+  border-bottom: 1px solid whitesmoke;
+}
+
+.Describer {
+  font-weight: 400;
+  color: aquamarine;
+}
+
+.Who {
+  font-weight: 400;
+  color: lightcoral;
+}
