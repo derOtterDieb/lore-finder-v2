@@ -1,9 +1,20 @@
 import React from 'react'
 
-const FfxivApiResults = ({ ffxivApiResults }) => {
+const Item = ({ item }) => {
     return (
-        <div className="Result-container">
-            {ffxivApiResults.Name_fr}
+        <div>
+            {item.Name}
+        </div>
+    );
+}
+
+const FfxivApiResults = ({ ffxivApiResults }) => {
+    console.log(ffxivApiResults);
+    return (
+        <div>
+            {ffxivApiResults.map((item) => (
+                <Item key={item.ID} item={item} />
+            ))}
         </div>
     );
 }

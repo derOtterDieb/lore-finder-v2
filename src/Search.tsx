@@ -23,14 +23,14 @@ class Search extends Component {
     fetch(url)
       .then(res => res.json())
       .then((data) =>{
-        this.setState({ ffxivApiResults: data })
+        this.setState({ ffxivApiResults: data.Results })
       })
       .catch(console.log)
   }
 
   render() {
     return (
-      <form className="Custom-form">
+      <div className="Custom-form">
         <label>Recherche :
           <DebounceInput 
             minLength={2}
@@ -41,14 +41,8 @@ class Search extends Component {
         <div className="Results-container">
           <FfxivApiResults ffxivApiResults={this.state.ffxivApiResults} />
         </div>
-      </form>
+      </div>
     );
-  }
-}
-
-class Result extends React.Component<{ searchValue: string }> {
-  render() {
-    return <div>{this.props.searchValue}</div>
   }
 }
 
