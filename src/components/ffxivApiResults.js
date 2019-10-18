@@ -132,6 +132,12 @@ const Item = ({ item }) => {
                     </span>&nbsp;:&nbsp;
                     <i>{item.Text_fr ? item.Text_fr : 'Texte introuvable'}</i>
                 </li>
+                <li>
+                    <span className="Describer">
+                        Type
+                    </span>&nbsp;:&nbsp;
+                    <i>{item.Source ? item.Source : 'inconnu'}</i>
+                </li>
                 <h4>D&eacute;tails :</h4>
                 <FfxivItemDetails url={
                     item.Data ?
